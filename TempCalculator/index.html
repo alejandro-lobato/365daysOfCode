@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Temperature Calculator</title>
+    </head>
+
+    <body>
+        <h2>Celsius to Fahrenheit Calculator</h2>
+        <div>
+            <form>
+                <label for="cToFInput">Celsius to Fahrenheit</label>
+                <input type="radio" name="cToFInput">
+                
+                <label for="fToCInput">Fahrenheit to Celsius</label>
+                <input type="radio" name="fToCInput">
+                
+                <br>
+                <label for="celsiusInput">Celsius</label>
+                <input name="celsiusInput">
+                <label for="fahrenheitInput">Fahrenheit</label>
+                <input name="fahrenheitInput">
+                <button onclick="celsiusToFahrenheit()">
+                    Convert
+                </button>
+            </form>
+        </div>
+
+        <script src="./logic.js"></script>
+    </body>
+</html>
