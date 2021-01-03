@@ -7,7 +7,7 @@
     <body>
         <h2>Celsius to Fahrenheit Calculator</h2>
         <div>
-            <form>
+            <form action="#">
                 <label for="cToFInput">Celsius to Fahrenheit</label>
                 <input type="radio" name="cToFInput">
                 
@@ -16,13 +16,14 @@
                 
                 <br>
                 <label for="celsiusInput">Celsius</label>
-                <input name="celsiusInput">
+                <input name="celsiusInput" type="text" id="celsiusInput">
                 <label for="fahrenheitInput">Fahrenheit</label>
-                <input name="fahrenheitInput">
+                <input name="fahrenheitInput" type="text" id="fahrenheitInput">
                 <button onclick="celsiusToFahrenheit()">
                     Convert
                 </button>
             </form>
+            <h3 id="resultText">The conversion will appear here.</h3>
         </div>
 
         <script src="./logic.js"></script>
