@@ -1,13 +1,31 @@
-function celsiusToFahrenheit()
-{ 
-    let celsius = document.getElementById("celsiusInput").value;
-    if(celsius == "")
-    {
-        alert("Please enter a number.");  
+function celsiusToFahrenheit(degrees) { return degrees * 1.8 + 32; }
+function fahrenheitToCelsius(degrees) { return (degrees - 32) / 1.8 }
+
+function convert()
+{
+    let cToF = document.getElementById("cToFRadio");
+    let fToC = document.getElementById("fToCRadio");
+    
+    if(fToC.checked){
+        let fahrenheitDegrees = document.getElementById("fahrenheitInput").value;
+        console.log(fahrenheitDegrees);
+        document.getElementById("resultText").textContent = fahrenheitToCelsius(fahrenheitDegrees);
+
     }
-    else
-    {
-        result = celsius * 1.8 + 32;
-        document.getElementById("resultText").textContent = result;
-    } 
+    else if(cToF.checked){
+        let celsiusDegrees = document.getElementById("celsiusInput").value;
+        console.log(celsiusDegrees);
+        document.getElementById("resultText").textContent = 
+        celsiusDegrees + "celsius is " + celsiusToFahrenheit(celsiusDegrees);
+    }
+}
+
+function disableCelsiusInput(){
+    document.getElementById("fahrenheitInput").disabled = false;
+    document.getElementById("celsiusInput").disabled = true;
+}
+
+function disableFahrenheitInput(){
+    document.getElementById("celsiusInput").disabled = false;
+    document.getElementById("fahrenheitInput").disabled = true;
 }
