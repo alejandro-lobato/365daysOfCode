@@ -10,13 +10,13 @@ function convert()
         let fahrenheitDegrees = document.getElementById("fahrenheitInput").value;
         console.log(fahrenheitDegrees);
         document.getElementById("resultText").textContent = fahrenheitToCelsius(fahrenheitDegrees);
+        document.getElementById("resultText").textContent = parseFloat(fahrenheitToCelsius(fahrenheitDegrees)).toFixed(2) + " C";
 
     }
     else if(cToF.checked){
         let celsiusDegrees = document.getElementById("celsiusInput").value;
         console.log(celsiusDegrees);
-        document.getElementById("resultText").textContent = 
-        celsiusDegrees + "celsius is " + celsiusToFahrenheit(celsiusDegrees);
+        document.getElementById("resultText").textContent = parseFloat(celsiusToFahrenheit(celsiusDegrees)).toFixed(2) + " F";
     }
 }
 
