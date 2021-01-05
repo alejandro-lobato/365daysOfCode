@@ -8,14 +8,13 @@ function convert()
     
     if(fToC.checked){
         let fahrenheitDegrees = document.getElementById("fahrenheitInput").value;
-        console.log(fahrenheitDegrees);
-        document.getElementById("resultText").textContent = fahrenheitToCelsius(fahrenheitDegrees);
+        if(fahrenheitDegrees != "")
         document.getElementById("resultText").textContent = parseFloat(fahrenheitToCelsius(fahrenheitDegrees)).toFixed(2) + " C";
 
     }
     else if(cToF.checked){
         let celsiusDegrees = document.getElementById("celsiusInput").value;
-        console.log(celsiusDegrees);
+        if(fahrenheitDegrees != "")
         document.getElementById("resultText").textContent = parseFloat(celsiusToFahrenheit(celsiusDegrees)).toFixed(2) + " F";
     }
 }
@@ -28,4 +27,8 @@ function disableCelsiusInput(){
 function disableFahrenheitInput(){
     document.getElementById("celsiusInput").disabled = false;
     document.getElementById("fahrenheitInput").disabled = true;
+}
+
+function setBackground(){
+    document.body.style = "background: url(" + "https://picsum.photos/1000/1000/?blur);";
 }

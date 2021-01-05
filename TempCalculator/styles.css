@@ -1,0 +1,46 @@
+body {
+    font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: #dcdcdc;
+    padding: 2em;
+    border-radius: 2%;
+}
+
+#formContainer {
+    background-color: #f0f0f0;
+    padding: 2em;
+}
+
+#formContainer * {
+    margin-top: 1em;
+}
+
+#formContainer form {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+h1 {
+    text-align: center;
+}
+
+@media (max-width: 799px) 
+{
+    
+}
+
+@media (min-width: 800px) and (max-width: 1399px)
+{
+    
+}
+
+@media (min-width: 1400px)
+{
+
+}
