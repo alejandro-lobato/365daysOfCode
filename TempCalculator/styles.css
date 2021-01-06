@@ -1,14 +1,27 @@
 body {
     font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+    display: relative;
+}
+
+#radios {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
+}
+
+#radios label {
+    flex-grow: 3;
+}
+
+#radios input {
+    flex-grow: 2;
 }
 
 main {
     background-color: #dcdcdc;
-    padding: 2em;
     border-radius: 2%;
+    padding: 20px;
+    margin: 15% 5% 30% 5%;
 }
 
 #formContainer {
@@ -23,24 +36,23 @@ main {
 #formContainer form {
     display: flex;
     flex-direction: column;
-    align-content: space-around;
 }
 
 h1 {
     text-align: center;
 }
 
-@media (max-width: 799px) 
+@media (min-width: 1000px) and (max-width: 1599px)
 {
-    
+
+    main {
+        margin: 10% 20% 20% 20%;
+    }
 }
 
-@media (min-width: 800px) and (max-width: 1399px)
+@media (min-width: 1600px)
 {
-    
-}
-
-@media (min-width: 1400px)
-{
-
+    main {
+        margin: 10% 25% 15% 25%;
+    }
 }

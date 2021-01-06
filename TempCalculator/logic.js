@@ -30,5 +30,5 @@ function disableFahrenheitInput(){
 }
 
 function setBackground(){
-    document.body.style = "background: url(" + "https://picsum.photos/1000/1000/?blur);";
+    document.body.style = "background: lineargradi url(" + "https://picsum.photos/1000/1000/?blur);";
 }
