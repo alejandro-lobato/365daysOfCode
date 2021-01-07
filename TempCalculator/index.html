@@ -8,41 +8,44 @@
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     </head>
 
-    <body onload="setBackground()">
-        <main>
-            <div id="formContainer">
-                
-                <h1>Temperature Calculator</h1>
-                
-                <form onsubmit="return false">
-                    <div id="radios">
-                        <label for="cToFInput">Celsius to Fahrenheit</label>
-                        <input type="radio" 
-                        name="conversionRadioInput" 
-                        id="cToFRadio" 
-                        checked 
-                        onchange="disableFahrenheitInput()">
-                        
-                        <label for="fToCInput">Fahrenheit to Celsius</label>
-                        <input type="radio" 
-                        name="conversionRadioInput" 
-                        id="fToCRadio" 
-                        onchange="disableCelsiusInput()">
-                    </div>
+    <body>
+        <div id="filter">
+            <main>
+                <div id="formContainer">
+                    
+                    <h1>Temperature Calculator</h1>
+                    
+                    <form onsubmit="return false">
+                        <div id="radios">
+                            <label for="cToFInput">Celsius to Fahrenheit</label>
+                            <input type="radio" 
+                            name="conversionRadioInput" 
+                            id="cToFRadio" 
+                            checked 
+                            onchange="disableFahrenheitInput()">
+                            
+                            <label for="fToCInput">Fahrenheit to Celsius</label>
+                            <input type="radio" 
+                            name="conversionRadioInput" 
+                            id="fToCRadio" 
+                            onchange="disableCelsiusInput()">
+                        </div>
 
-                    <label for="celsiusInput">Celsius</label>
-                    <input name="celsiusInput" type="text" id="celsiusInput">
+                        <label for="celsiusInput">Celsius</label>
+                        <input name="celsiusInput" type="text" id="celsiusInput">
 
-                    <label for="fahrenheitInput">Fahrenheit</label>
-                    <input name="fahrenheitInput" type="text" id="fahrenheitInput" disabled>
+                        <label for="fahrenheitInput">Fahrenheit</label>
+                        <input name="fahrenheitInput" type="text" id="fahrenheitInput" disabled>
 
-                    <button onclick="convert()">Convert</button>
-                </form>
-                <h2 id="resultHeader">Conversion will appear below:</h2>
-                <h3 id="resultText">0.00 C</h3>
-            </div>
+                        <button onclick="convert()">Convert</button>
+                    </form>
+                    <h2 id="resultHeader">Conversion will appear below:</h2>
+                    <h3 id="resultText">0.00 C</h3>
+                </div>
 
-        </main>
+            </main>
+
+        </div>
         <script src="./logic.js"></script>
     </body>
 </html>

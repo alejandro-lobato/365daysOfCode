@@ -14,7 +14,7 @@ function convert()
     }
     else if(cToF.checked){
         let celsiusDegrees = document.getElementById("celsiusInput").value;
-        if(fahrenheitDegrees != "")
+        if(celsiusDegrees != "")
         document.getElementById("resultText").textContent = parseFloat(celsiusToFahrenheit(celsiusDegrees)).toFixed(2) + " F";
     }
 }
@@ -27,8 +27,4 @@ function disableCelsiusInput(){
 function disableFahrenheitInput(){
     document.getElementById("celsiusInput").disabled = false;
     document.getElementById("fahrenheitInput").disabled = true;
-}
-
-function setBackground(){
-    document.body.style = "background: lineargradi url(" + "https://picsum.photos/1000/1000/?blur);";
 }
