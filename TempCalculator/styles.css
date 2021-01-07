@@ -1,6 +1,24 @@
+html {
+    background:  url(./img/weather-2000.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+}
+
 body {
     font-family: 'PT Sans', Arial, Helvetica, sans-serif;
-    display: relative;
+    margin: 0;
+}
+
+#filter{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom, rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.85));
 }
 
 #radios {
@@ -42,17 +60,14 @@ h1 {
     text-align: center;
 }
 
-@media (min-width: 1000px) and (max-width: 1599px)
-{
 
-    main {
-        margin: 10% 20% 20% 20%;
-    }
-}
-
-@media (min-width: 1600px)
+@media (min-width: 1250px)
 {
     main {
-        margin: 10% 25% 15% 25%;
+        position: absolute;
+        margin: 0 20% 0 20%;
+        left: 0;
+        top: 187px;
+        width: 60%;
     }
 }
