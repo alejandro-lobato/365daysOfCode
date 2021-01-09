@@ -17,18 +17,22 @@
                     
                     <form onsubmit="return false">
                         <div id="radios">
-                            <label for="cToFInput">Celsius to Fahrenheit</label>
-                            <input type="radio" 
-                            name="conversionRadioInput" 
-                            id="cToFRadio" 
-                            checked 
-                            onchange="disableFahrenheitInput()">
-                            
-                            <label for="fToCInput">Fahrenheit to Celsius</label>
-                            <input type="radio" 
-                            name="conversionRadioInput" 
-                            id="fToCRadio" 
-                            onchange="disableCelsiusInput()">
+                            <div>
+                                <label for="cToFInput">Celsius to Fahrenheit</label>
+                                <input type="radio" 
+                                name="conversionRadioInput" 
+                                id="cToFRadio" 
+                                checked 
+                                onchange="disableFahrenheitInput()">
+                            </div>
+                                
+                            <div>
+                                <label for="fToCInput">Fahrenheit to Celsius</label>
+                                <input type="radio" 
+                                name="conversionRadioInput" 
+                                id="fToCRadio" 
+                                onchange="disableCelsiusInput()">
+                            </div>
                         </div>
 
                         <label for="celsiusInput">Celsius</label>
@@ -40,7 +44,7 @@
                         <button onclick="convert()">Convert</button>
                     </form>
                     <h2 id="resultHeader">Conversion will appear below:</h2>
-                    <h3 id="resultText">0.00 C</h3>
+                    <h1 id="resultText">0.00 C</h1>
                 </div>
 
             </main>
