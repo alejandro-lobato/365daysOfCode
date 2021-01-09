@@ -25,18 +25,33 @@ body {
     align-items: baseline;
 }
 
+form {
+    width: 90%;
+}
+
 #radios {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
+    margin: 0 2vw;
 }
 
-#radios label {
-    flex-grow: 3;
+#radios div {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-grow: 1;
+    margin: 0;
 }
 
-#radios input {
-    flex-grow: 2;
+#radios div label {
+    margin: 0;
+    margin-right: 2vw;
+}
+
+#radios div input {
+    margin: 0;
 }
 
 main {
@@ -44,7 +59,6 @@ main {
     border-radius: 2%;
     padding: 20px;
     margin: 10vh 0 0 0;
-    
     
 }
 
@@ -71,5 +85,20 @@ h1 {
 {
     main {
         width: 34vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #formContainer {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    form {
+        width: 80%;
     }
 }
