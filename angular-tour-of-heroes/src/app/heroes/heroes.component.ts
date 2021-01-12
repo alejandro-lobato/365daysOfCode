@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
+import { HEROES } from '../mock-heroes';
 
 // Angular metadata for the component
 @Component({
@@ -12,18 +13,22 @@ import { Hero } from '../hero';
 })
 export class HeroesComponent implements OnInit {
 
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
-  };
+  selectedHero!: Hero;
+  heroes = HEROES;
 
+  
+  
   constructor() { }
   
-  // A good place for a component to fetch its initial data.
-  // Angular calls ngOnInit() shortly after creating a component. 
-  // It's a good place to put initialization logic.
   ngOnInit(): void {
+    // A good place for a component to fetch its initial data.
+    // Angular calls ngOnInit() shortly after creating a component. 
+    // It's a good place to put initialization logic.
     
+  }
+  
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
   }
 
 }
