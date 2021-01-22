@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+        <title> El siguiente viernes </title>
+    </head>
+
+    <body>
+        <style>
+            * {
+                font-family: 'Noto Sans JP', sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            h1 {
+                font-size: 6vw;
+            }
+
+            .flex-parent{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 90vh;
+            }
+
+            p {
+                font-size: 10vh;
+            }
+
+        </style>
+        <div class="flex-parent">
+            <div class="flex-child">
+                <p>Faltan</p>
+                <h1 id="time-display"></h1>
+                <p>para el siguiente Viernes.</p>
+            </div>
+        </div>
+
+        <script>
+            let timeHeader = document.getElementById("time-display");
+            let dateObject = new Date();
+            let nextFriday = new Date(dateObject.getFullYear(), dateObject.getMonth(), dateObject.getDate() + (5 - dateObject.getDay()));
+            let millis = nextFriday.getTime() - dateObject.getTime();
+            setInterval( function() {
+                millis = millis - 1000;
+                let timerDate = new Date(millis);
+                timeHeader.innerText = `${timerDate.getDate()} días, ${timerDate.getHours()} horas, ${timerDate.getMinutes()} minutos y ${timerDate.getSeconds()} segundos`;
+            },  1000);
+        </script>
+    </body>
+</html>
